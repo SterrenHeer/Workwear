@@ -1,0 +1,37 @@
+@import 'base/fonts';
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1568px;
+  width: 81.666%;
+  margin: 0 auto;
+}
+
+.br {
+  display: none;
+}
+
+.links_hierarchy {
+  margin-top: 50px;
+  display: flex;
+  gap: 10px 6px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+    color: #000;
+    &:first-child {
+      color: #919191;
+    }
+  }
+}
+
+@import 'blocks/title';
+@import "blocks/button";
+
+@import 'media/general';
