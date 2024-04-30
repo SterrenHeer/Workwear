@@ -13,6 +13,7 @@
         }
         &_item {
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 0 39px;
             max-width: 25%;
@@ -20,6 +21,9 @@
             border-radius: 10px;
             background: #fafafa;
             text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            color: #8a8a8a;
             cursor: pointer;
         }
         &_content {
@@ -74,8 +78,7 @@
             &_item {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                height: 49px;
+                gap: 11px;
             }
             .red div {
                 margin: 0;
