@@ -44,6 +44,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 		mobile = window.matchMedia('(max-width: 992px)').matches,
         templates = [],
         mainClass,
+        slidesNew,
 		dots = [];
     const slides = document.querySelectorAll(slideSelector),
 		container = document.querySelector(containerSelector),
@@ -71,7 +72,19 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 	});
 
     for (let i = 0; i < (perPage - 1); i++) {
-        field.append(templates[i + 1].cloneNode(true));
+        if (slideSelector.includes('licenses')) {
+            field.append(templates[i].cloneNode(true));
+        } else {
+            field.append(templates[i + 1].cloneNode(true));
+        }
+    }
+    slidesNew = document.querySelectorAll(slideSelector);
+
+    if (slideSelector.includes('licenses') && perPage > 1 && !mobile) {
+        slidesNew[slideIndex].style.height = '400px';
+        slidesNew[slideIndex - 1].style.height = '';
+        slidesNew.forEach(slide => slide.firstElementChild.classList.remove('absolute'));
+        slidesNew[slideIndex].firstElementChild.classList.add('absolute');
     }
 
     if (indicatorsClass) {
@@ -117,7 +130,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
             field.append(templates[i + 1].cloneNode(true));
         }
 
-        let slidesNew = document.querySelectorAll(slideSelector);
+        slidesNew = document.querySelectorAll(slideSelector);
         slidesNew.forEach((slide, index) => {
             slide.style.width = width;
             if (index != 0) {
@@ -159,8 +172,20 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 		}
 
 		if (slideIndex == slides.length) {
+            if (slideSelector.includes('licenses') && !mobile) {
+                slidesNew[1].style.height = '400px';
+                slidesNew[slideIndex].style.height = '';
+                slidesNew.forEach(slide => slide.firstElementChild.classList.remove('absolute'));
+                slidesNew[1].firstElementChild.classList.add('absolute');
+            }
 			slideIndex = 1;
 		} else {
+            if (slideSelector.includes('licenses') && !mobile) {
+                slidesNew[slideIndex + 1].style.height = '400px';
+                slidesNew[slideIndex].style.height = '';
+                slidesNew.forEach(slide => slide.firstElementChild.classList.remove('absolute'));
+                slidesNew[slideIndex + 1].firstElementChild.classList.add('absolute');
+            }
 			slideIndex++;
 		}
 		changeActivity();
@@ -243,14 +268,29 @@ if (document.querySelector('.categories_tab_row_image') != null) {
     tabs('.categories_tab_row_image.subtab_2', '.categories_subtab_item', '.categories_subtab_content', '.categories_subtab_header', 'categories_subtab_active');
 }
 
-slider({
-    containerSelector: '.arrivals_container',
-    slideSelector: '.arrivals_slide',
-    wrapperSelector: '.arrivals_wrapper',
-    fieldSelector: '.arrivals_field',
-    indicatorsClass: 'arrivals_indicators',
-    elementsPerPage: 4,
-    elementsPerPageMobile: 2,
-    duration: 3000,
-    swipe: true,
-});
+if (document.querySelector('.arrivals_field') != null) {
+    slider({
+        containerSelector: '.arrivals_container',
+        slideSelector: '.arrivals_slide',
+        wrapperSelector: '.arrivals_wrapper',
+        fieldSelector: '.arrivals_field',
+        indicatorsClass: 'arrivals_indicators',
+        elementsPerPage: 4,
+        elementsPerPageMobile: 2,
+        duration: 3000,
+        swipe: true,
+    });
+}
+if (document.querySelector('.licenses_field') != null) {
+    slider({
+        containerSelector: '.licenses_container',
+        slideSelector: '.licenses_slide',
+        wrapperSelector: '.licenses_wrapper',
+        fieldSelector: '.licenses_field',
+        indicatorsClass: 'licenses_indicators',
+        elementsPerPage: 3,
+        elementsPerPageMobile: 1,
+        duration: 3000,
+        swipe: true,
+    });
+}
