@@ -104,6 +104,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 const slideTo = e.target.getAttribute('data-slide-to');
                 slideIndex = slideTo;
                 offset = deleteNotDigits(width) * (slideTo - 1);
+                changeLicensesSlide(slideIndex);
                 changeActivity();
                 makeTimer(duration);
             });
@@ -211,6 +212,16 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slidesNew[index].firstElementChild.classList.add('absolute');
             }
         }
+        if (slideSelector.includes('monthly')) {
+            slidesNew.forEach(slide => {
+                slide.classList.remove('main');
+                slide.lastElementChild.classList.remove('show');
+            });
+            if (!mobile) {
+                slidesNew[index - 1].classList.add('main');
+                slidesNew[index - 1].lastElementChild.classList.add('show');
+            }
+        }
     }
 
 	function makeTimer(duration){
@@ -292,6 +303,22 @@ if (document.querySelector('.licenses_field') != null) {
         elementsPerPage: 3,
         elementsPerPageMobile: 1,
         duration: 3000,
+        swipe: true,
+    });
+}
+if (document.querySelector('.monthly_field') != null) {
+    slider({
+        containerSelector: '.monthly_container',
+        slideSelector: '.monthly_slide',
+        nextSlideSelector: '.monthly_next',
+        prevSlideSelector: '.monthly_prev',
+        wrapperSelector: '.monthly_wrapper',
+        fieldSelector: '.monthly_field',
+        indicatorsClass: 'monthly_indicators',
+        elementsPerPage: 3,
+        elementsPerPageMobile: 2,
+        duration: 3000,
+        rowGap: 24,
         swipe: true,
     });
 }

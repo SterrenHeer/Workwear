@@ -28,23 +28,19 @@
             border-radius: 10px;
             box-shadow: 0 15px 45px 0 rgba(46, 33, 61, 0.08);
             background: #fff;
-            img {
-                height: 100%;
-                max-width: 100%;
-            }
         }
         &_wrapper.absolute {
             position: absolute;
             z-index: 2;
             top: -50px;
             width: 133.7%;
+        }
+        &_image {
+            height: calc(100% - 28px);
             img {
                 height: 100%;
                 max-width: 100%;
             }
-        }
-        &_image {
-            height: calc(100% - 28px);
         }
     }
     &_indicators {
