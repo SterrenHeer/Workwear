@@ -1,6 +1,9 @@
 .licenses {
     padding-top: 245px;
     background: #fafafa;
+    &_container {
+        width: 89.5%;
+    }
     &_wrapper {
         margin-top: 7px;
         overflow: hidden;
@@ -46,6 +49,28 @@
     }
     &_indicators {
         display: none;
+    }
+    &_controls {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        .rotate {
+            transform: rotate(180deg);
+        }
+    }
+    &_prev, &_next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        background: #fff;
+        box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+    }
+    .container {
+        display: flex;
+        justify-content: center;
     }
     .title_46 {
         text-align: center;
