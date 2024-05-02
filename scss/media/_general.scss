@@ -1,6 +1,8 @@
 @import 'title';
 @import "header";
 @import "categories";
+@import "arrivals";
+@import "licenses";
 
 .hide {
 	display: none;
@@ -15,5 +17,9 @@
 @media (max-width: 768px) {
     .container {
         width: 86.94%;
+    }
+    .pageUp {
+        width: 37px;
+        height: 37px;
     }
 }

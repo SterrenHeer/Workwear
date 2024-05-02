@@ -55,16 +55,24 @@
                 margin-top: 23px;
             }
             &_button {
-                display: none;
+                display: flex;
                 justify-content: center;
                 margin-top: 30px;
                 margin-bottom: -43px;
+                height: auto;
+                max-height: 0;
+                transition: max-height 0.5s;
                 button {
                     width: 82.14%;
+                    transition: 0.5s;
+                    opacity: 0;
                 }
             }
             &:hover &_button {
-                display: flex;
+                max-height: 200px;
+                button {
+                    opacity: 1;
+                }
             }
         }
         .title_12 {
