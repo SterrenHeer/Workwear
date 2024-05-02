@@ -66,7 +66,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     slides.forEach((slide, index) => {
 		slide.style.width = width;
         if (index != 0) {
-            slide.style.paddingLeft = rowGap + 'px';
+            if (mobile) {
+                slide.style.paddingLeft = rowGap / 2 + 'px';
+            } else {
+                slide.style.paddingLeft = rowGap + 'px';
+            }
         }
         templates[index] = slide;
 	});
@@ -130,7 +134,11 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         slidesNew.forEach((slide, index) => {
             slide.style.width = width;
             if (index != 0) {
-                slide.style.paddingLeft = rowGap + 'px';
+                if (mobile) {
+                    slide.style.paddingLeft = rowGap / 2 + 'px';
+                } else {
+                    slide.style.paddingLeft = rowGap + 'px';
+                }
             }
         });
         
@@ -217,10 +225,8 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slide.classList.remove('main');
                 slide.lastElementChild.classList.remove('show');
             });
-            if (!mobile) {
-                slidesNew[index - 1].classList.add('main');
-                slidesNew[index - 1].lastElementChild.classList.add('show');
-            }
+            slidesNew[index - 1].classList.add('main');
+            slidesNew[index - 1].lastElementChild.classList.add('show');
         }
     }
 

@@ -1,0 +1,136 @@
+@media (max-width:1720px) {
+
+}
+@media (max-width:1600px) {
+
+}
+@media (max-width:1440px) {
+    .monthly {
+        &_timer {
+            gap: 12px;
+            &_block {
+                gap: 12px;
+                .digitalNum {
+                    width: 69px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .monthly {
+        &_content {
+            width: 37.4%;
+        }
+        &_container {
+            width: 61.2%;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .monthly {
+        padding-top: 45px;
+        &_wrapper-main {
+            flex-direction: column;
+            gap: 35px;
+            .mobile {
+                display: block;
+            }
+            .full {
+                display: none;
+            }
+        }
+        &_content {
+            order: 1;
+            width: 100%;
+            .title_28 {
+                margin-top: 0;
+                text-align: center;
+            }
+            button {
+                margin-top: 19px;
+                width: 100%;
+            }
+        }
+        &_container {
+            width: 100%;
+            .title_20 {
+                margin-top: 12px;
+                color: #8a8a8a;
+            }
+        }
+        &_wrapper {
+            margin-top: 38px;
+        }
+        &_slide {
+            height: 530px;
+            &:first-child {
+                .monthly_descr {
+                    left: 6px;
+                }
+            }
+        }
+        &_slide.main {
+            height: 630px;
+        }
+        &_controls {
+            display: none;
+        }
+        &_descr {
+            left: 18px;
+            bottom: 5px;
+            padding: 25px 6.7%;
+            width: calc(84% - 13.4%);
+            min-height: 49px;
+            &_divider {
+                width: 21px;
+            }
+        }
+        &_indicators {
+            gap: 0;
+            margin-top: 23px;
+            padding-left: 0;
+            margin-top: 12px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+        }
+        &_dot {
+            background: #fff;
+        }
+        &_active {
+            padding: 0;
+            border: none;
+            border-radius: 10px;
+            background: #ff4646;
+            &::before {
+                display: none;
+            }
+        }
+        &_timer {
+            justify-content: center;
+            margin-top: 7px;
+        }
+    }    
+}
+@media (max-width: 768px) {
+    .monthly {
+        &_slide {
+            height: 374px;
+        }
+        &_slide.main {
+            height: 430px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .monthly {
+        &_slide {
+            height: 234px;
+        }
+        &_slide.main {
+            height: 280px;
+        }
+    }
+}
