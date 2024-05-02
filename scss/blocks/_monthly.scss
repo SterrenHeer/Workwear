@@ -8,6 +8,17 @@
     &_content {
         position: relative;
         width: 32.4%;
+        .title_20 {
+            margin-top: 20px;
+            color: #8a8a8a;
+        }
+        .title_28 {
+            margin-top: 50px;
+        }
+        button {
+            margin-top: 92px;
+            width: 48.77%;
+        }
     }
     &_container {
         width: 66.2%;
@@ -109,6 +120,29 @@
             height: 11px;
             border-radius: 100%;
             background: #000;
+        }
+    }
+    &_timer {
+        display: flex;
+        gap: 30px;
+        margin-top: 15px;
+        &_block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .digitalNum {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 76px;
+                height: 76px;
+                border-radius: 10px;
+                box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+                background: #fff;
+            }
+            .title_24 {
+                text-align: center;
+            }
         }
     }
 }
