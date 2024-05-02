@@ -295,3 +295,13 @@ if (document.querySelector('.licenses_field') != null) {
         swipe: true,
     });
 }
+
+const pageup = document.querySelector('.pageUp');
+window.addEventListener("scroll", (event) => {
+    if (window.scrollY > 1000) {
+        pageup.classList.add('show');
+    } 
+    else {
+        pageup.classList.remove('show');
+    }
+});

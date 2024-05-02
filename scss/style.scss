@@ -31,6 +31,18 @@
   }
 }
 
+.pageUp {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 11px;
+  width: 57px;
+  height: 57px;
+  img {
+      width: 100%;
+  }
+}
+
 @import 'blocks/title';
 @import "blocks/button";
 @import "blocks/header";
