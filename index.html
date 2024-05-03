@@ -37,7 +37,7 @@
                             <img src="icons/whatsapp.png" alt="whatsapp">
                         </div>
                     </div>
-                    <button class="button button_header title">
+                    <button data-modal class="button button_header title">
                         Получить прайс
                     </button>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="monthly_content">
                     <div class="title title_46 bold full">Предложения месяца</div>
                     <div class="title title_20 full">описание акции</div>
-                    <button class="button full">Получить прайс</button>
+                    <button data-modal class="button full">Получить прайс</button>
                     <div class="title title_28">Спешите, пока не поздно!</div>
                     <div class="monthly_timer">
                         <div class="monthly_timer_block">
@@ -78,7 +78,7 @@
                             <div class="title title_24">Секунд</div>
                         </div>
                     </div>
-                    <button class="button mobile">Получить прайс</button>
+                    <button data-modal class="button mobile">Получить прайс</button>
                     <div class="monthly_controls">
                         <div class="monthly_prev">
                             <img class="rotate" src="icons/button_arrow.svg" alt="prev">
@@ -179,7 +179,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -230,7 +230,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -252,7 +252,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -274,7 +274,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -296,7 +296,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -318,7 +318,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                         <div class="categories_tab_row">
@@ -340,7 +340,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -365,7 +365,7 @@
                                 </div>
                             </div>
                             <div class="categories_tab_row_button">
-                                <button class="button">Заказать</button>
+                                <button data-modal class="button">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -492,6 +492,29 @@
             </div>
         </div>
     </section>
+    <div class="consult">
+		<div class="consult_modal">
+			<div class="consult_wrapper">
+                <div class="consult_close"><img data-close src="icons/close.svg" alt="close"></div>
+                <div class="consult_image">
+                    <img src="img/consult_bg.png" alt="consult_bg">
+                </div>
+                <div class="consult_content">
+                    <div class="consult_content_image">
+                        <img src="icons/MARGUN - Logo 1.svg" alt="logo">
+                    </div>
+                    <div class="title title_28">Оставьте заявку и наши специалисты свяжутся с Вами в ближайшее время</div>
+                    <form class="consult_form" action="#">
+                        <div class="consult_form_inputs">
+                            <input type="text" name="name" placeholder="Введите имя" class="consult_form_input" required> 
+                            <input type="text" name="phone" placeholder="Номер телефона" class="consult_form_input" required>
+                        </div>
+                        <button type="submit" class="button">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+		</div>
+	</div>
     <a href="#header" class="pageUp">
         <img src="icons/scroll.svg" alt="up">
     </a>
