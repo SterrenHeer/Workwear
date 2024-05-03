@@ -1,4 +1,4 @@
-.consult {
+.consult, .thanks {
     position: relative;
     display: none;
     position: fixed;
@@ -90,5 +90,18 @@
     }
     .title_28 {
         margin-top: 112px;
+    }
+}
+.thanks {
+    &_wrapper {
+        align-items: center;
+    }
+    &_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
     }
 }

@@ -11,7 +11,7 @@
 
 }
 @media (max-width: 992px) {
-    .consult {
+    .consult, .thanks {
         &_modal {
             padding: 16px 12px;
             width: calc(100% - 24px);

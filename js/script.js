@@ -426,6 +426,7 @@ if (document.querySelector('.monthly_timer') != null) {
 
 if (document.querySelector('.consult') != null) {
     modal('[data-modal]', 'data-close', '.consult');
+    modal('[data-thanks]', 'data-close', '.thanks');
 }
 
 const pageup = document.querySelector('.pageUp');
@@ -436,4 +437,10 @@ window.addEventListener("scroll", (event) => {
     else {
         pageup.classList.remove('show');
     }
+});
+
+document.querySelector('.consult_form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeModal('.consult');
+    openModal('.thanks');
 });
