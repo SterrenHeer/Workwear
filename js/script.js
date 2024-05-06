@@ -204,6 +204,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
+        field.classList.add('trans-5')
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -212,6 +213,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
+            field.classList.remove('trans-5')
 		} else {
 			slideIndex++;
 		}
@@ -220,6 +222,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
+        field.classList.add('trans-5')
         if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
@@ -228,6 +231,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 
 		if (slideIndex == 1) {
 			slideIndex = slides.length;
+            field.classList.remove('trans-5')
 		} else {
 			slideIndex--;
 		}
