@@ -438,7 +438,6 @@ if (document.querySelector('.assortment_field') != null) {
         indicatorsClass: 'assortment_indicators',
         elementsPerPage: 3,
         elementsPerPageMobile: 2,
-        duration: 3000,
         rowGap: 24,
         swipe: true,
     });
