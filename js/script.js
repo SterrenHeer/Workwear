@@ -204,7 +204,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
 	function moveNext() {
-        field.classList.add('trans-5')
+        if (!slideSelector.includes('assortment')) {
+            field.classList.add('trans-5')
+        }
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -222,7 +224,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
     }
 
     function movePrev() {
-        field.classList.add('trans-5')
+        if (!slideSelector.includes('assortment')) {
+            field.classList.add('trans-5')
+        }
         if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
@@ -258,7 +262,7 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
                 slidesNew[index].firstElementChild.classList.add('absolute');
             }
         }
-        if (slideSelector.includes('monthly')) {
+        if (slideSelector.includes('monthly') || slideSelector.includes('assortment')) {
             slidesNew.forEach(slide => {
                 slide.classList.remove('main');
                 slide.lastElementChild.classList.remove('show');
@@ -416,6 +420,22 @@ if (document.querySelector('.monthly_field') != null) {
         wrapperSelector: '.monthly_wrapper',
         fieldSelector: '.monthly_field',
         indicatorsClass: 'monthly_indicators',
+        elementsPerPage: 3,
+        elementsPerPageMobile: 2,
+        duration: 3000,
+        rowGap: 24,
+        swipe: true,
+    });
+}
+if (document.querySelector('.assortment_field') != null) {
+    slider({
+        containerSelector: '.assortment_container',
+        slideSelector: '.assortment_slide',
+        nextSlideSelector: '.assortment_next',
+        prevSlideSelector: '.assortment_prev',
+        wrapperSelector: '.assortment_wrapper',
+        fieldSelector: '.assortment_field',
+        indicatorsClass: 'assortment_indicators',
         elementsPerPage: 3,
         elementsPerPageMobile: 2,
         duration: 3000,
