@@ -71,7 +71,7 @@
                 }
             }
         }
-        &_slide.main {
+        &_slide.main, &_field {
             height: 630px;
         }
         &_controls {
@@ -119,7 +119,7 @@
         &_slide {
             height: 374px;
         }
-        &_slide.main {
+        &_slide.main, &_field {
             height: 430px;
         }
     }
@@ -129,7 +129,7 @@
         &_slide {
             height: 234px;
         }
-        &_slide.main {
+        &_slide.main, &_field {
             height: 280px;
         }
     }

@@ -207,6 +207,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
+        if (slideSelector.includes('licenses')) {
+            field.classList.add('trans-30')
+        }
         if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
@@ -216,6 +219,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
             field.classList.remove('trans-5')
+            if (slideSelector.includes('licenses')) {
+                field.classList.remove('trans-30')
+            }
 		} else {
 			slideIndex++;
 		}
@@ -227,6 +233,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
         if (!slideSelector.includes('assortment')) {
             field.classList.add('trans-5')
         }
+        if (slideSelector.includes('licenses')) {
+            field.classList.add('trans-30')
+        }
         if (offset == 0) {
 			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
@@ -236,6 +245,9 @@ function slider({containerSelector, slideSelector, nextSlideSelector, prevSlideS
 		if (slideIndex == 1) {
 			slideIndex = slides.length;
             field.classList.remove('trans-5')
+            if (slideSelector.includes('licenses')) {
+                field.classList.remove('trans-30')
+            }
 		} else {
 			slideIndex--;
 		}
@@ -407,7 +419,7 @@ if (document.querySelector('.licenses_field') != null) {
         indicatorsClass: 'licenses_indicators',
         elementsPerPage: 3,
         elementsPerPageMobile: 1,
-        duration: 3000,
+        duration: 6000,
         swipe: true,
     });
 }

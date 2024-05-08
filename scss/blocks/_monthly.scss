@@ -1,5 +1,5 @@
 .monthly {
-    padding-top: 120px;
+    padding: 120px 0 142px 0;
     background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
     &_wrapper-main {
         display: flex;
@@ -31,6 +31,7 @@
     }
     &_field {
         display: flex;
+        height: 650px;
     }
     &_slide {
         position: relative;
@@ -39,6 +40,7 @@
         align-items: center;
         align-self: flex-start;
         height: 550px;
+        transition: 0.5s;
         img {
             width: 100%;
             height: 100%;
@@ -73,6 +75,10 @@
         border-radius: 100%;
         background: #fff;
         box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 11px 15px 0 rgba(0, 0, 0, 0.3);
+        }
     }
     &_descr {
         display: none;
